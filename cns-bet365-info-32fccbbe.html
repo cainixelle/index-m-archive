@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · bet365 访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafbfc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 2rem 1rem 3rem;
+            min-height: 100vh;
+        }
+
+        .page-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* ---------- 顶部导航 ---------- */
+        .top-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 0 1.5rem;
+            border-bottom: 1px solid #e6eaef;
+            margin-bottom: 2.5rem;
+        }
+
+        .top-nav .logo-text {
+            font-weight: 600;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+            color: #1f2a3f;
+        }
+
+        .top-nav .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            font-size: 0.9rem;
+        }
+
+        .top-nav .nav-links a {
+            text-decoration: none;
+            color: #4b5a6e;
+            transition: color 0.2s;
+        }
+
+        .top-nav .nav-links a:hover {
+            color: #0f1e2f;
+        }
+
+        /* ---------- hero 区 ---------- */
+        .hero {
+            margin-bottom: 2.8rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #101d2b;
+        }
+
+        .hero .subhead {
+            font-size: 1.05rem;
+            color: #4b5a6e;
+            max-width: 580px;
+        }
+
+        /* ---------- 核心介绍 ---------- */
+        .intro-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .intro-section p {
+            margin-bottom: 1.2rem;
+            color: #2a384a;
+        }
+
+        .intro-section a {
+            color: #1b3b5a;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            transition: all 0.15s;
+        }
+
+        .intro-section a:hover {
+            background: #eef1f5;
+            text-decoration: none;
+        }
+
+        /* ---------- 三个场景模块 ---------- */
+        .scenes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.6rem;
+            margin: 2.8rem 0;
+        }
+
+        @media (min-width: 540px) {
+            .scenes-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .scene-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.6rem 1.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e9edf2;
+            transition: box-shadow 0.2s;
+        }
+
+        .scene-card:hover {
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .scene-card .emoji-badge {
+            font-size: 1.6rem;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+
+        .scene-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #162433;
+        }
+
+        .scene-card p {
+            font-size: 0.95rem;
+            color: #3d4d62;
+            line-height: 1.55;
+        }
+
+        /* ---------- 常见说明 / 提醒 ---------- */
+        .faq-block {
+            margin: 2.8rem 0 2rem;
+            border-top: 1px solid #e3e8ef;
+            padding-top: 2rem;
+        }
+
+        .faq-block h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.6rem;
+            color: #101d2b;
+        }
+
+        .faq-item {
+            margin-bottom: 1.6rem;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            font-size: 0.98rem;
+            margin-bottom: 0.25rem;
+            color: #1e2e42;
+        }
+
+        .faq-item .a {
+            font-size: 0.95rem;
+            color: #3e5268;
+            padding-left: 0.5rem;
+            border-left: 3px solid #d2dbe6;
+            padding-left: 0.9rem;
+        }
+
+        .faq-item .a a {
+            color: #1b3b5a;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .faq-item .a a:hover {
+            background: #e9eef4;
+            text-decoration: none;
+        }
+
+        /* ---------- 页脚 ---------- */
+        .site-footer {
+            margin-top: 3.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e3e8ef;
+            font-size: 0.85rem;
+            color: #68778b;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .site-footer span {
+            opacity: 0.8;
+        }
+
+        /* ---------- 响应式微调 ---------- */
+        @media (max-width: 480px) {
+            body { padding: 1.5rem 0.9rem 2rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .top-nav .nav-links { gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <span class="logo-text">bet365 简明指南</span>
+        <div class="nav-links">
+            <a href="#intro">概述</a>
+            <a href="#scenes">场景</a>
+            <a href="#faq">说明</a>
+        </div>
+    </nav>
+
+    <!-- hero -->
+    <header class="hero" id="intro">
+        <h1>访问之前，先看这里</h1>
+        <p class="subhead">日常使用中的几个注意点，帮你更顺畅地使用平台。不需要复杂操作，只需了解几个关键细节。</p>
+    </header>
+
+    <!-- 核心介绍 + 自然链接 -->
+    <section class="intro-section">
+        <p>
+            对于大部分用户来说，<a href="https://cns-bet365.com">bet365</a> 是一个内容比较丰富的平台，涵盖多种体育赛事与娱乐选项。初次打开网站时，建议留意页面语言的默认设置，以及所在地区的网络访问环境。如果遇到加载缓慢或页面异常，可以先检查浏览器缓存或尝试更换一个稳定的网络。
+        </p>
+        <p>
+            另外，建议把 <a href="https://cns-bet365.com">bet365</a> 添加到书签，避免通过第三方链接进入。直接使用官方域名是最稳妥的方式，也能减少不必要的重定向。平台会不定期更新界面和功能，保持浏览器为最新版本可以获得更好的体验。
+        </p>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <section id="scenes" class="scenes-grid">
+        <div class="scene-card">
+            <span class="emoji-badge">📱</span>
+            <h3>手机端访问</h3>
+            <p>在手机上打开 bet365 页面时，界面会自动适配屏幕。如果字体太小或布局偏移，可以尝试横竖屏切换，或者检查是否开启了浏览器的桌面模式。</p>
+        </div>
+        <div class="scene-card">
+            <span class="emoji-badge">🌐</span>
+            <h3>网络与地域提示</h3>
+            <p>部分地区可能需要对网络进行基础配置才能正常加载。使用公共 Wi‑Fi 时，建议先确认网络连接是否稳定，避免页面中途中断。</p>
+        </div>
+        <div class="scene-card">
+            <span class="emoji-badge">🔐</span>
+            <h3>账户与安全</h3>
+            <p>首次登录后建议设置双重验证，并定期更改密码。不要向任何人透露你的账户信息，也不要在公共设备上勾选“记住密码”。</p>
+        </div>
+    </section>
+
+    <!-- 常见说明 / FAQ 摘要 -->
+    <section id="faq" class="faq-block">
+        <h2>几个常见说明</h2>
+
+        <div class="faq-item">
+            <div class="q">为什么有时候页面显示不全？</div>
+            <div class="a">多数情况是浏览器缓存或插件干扰导致。可以尝试清除缓存、禁用广告拦截插件，或者使用无痕模式重新打开 <a href="https://cns-bet365.com">bet365</a>。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">注册时需要注意什么？</div>
+            <div class="a">填写真实信息，尤其是姓名和出生日期，后续身份验证会用到。一个邮箱和手机号只能绑定一个账户。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">可以用哪些支付方式？</div>
+            <div class="a">平台支持常见的银行卡、电子钱包以及部分地区的本地支付渠道。具体列表可以在存款页面查看，手续费和到账时间因方式而异。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">遇到问题如何联系支持？</div>
+            <div class="a">页面底部通常有“帮助中心”入口，里面包含了常见问题的自助解答。如果需要人工帮助，可以通过在线聊天或邮件联系，响应时间一般在几小时以内。</div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <span>简明访问提醒 · 保持理性</span>
+        <span>© 2025 · 非官方信息页</span>
+    </footer>
+
+</div>
+</body>
+</html>
